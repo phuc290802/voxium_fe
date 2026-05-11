@@ -2,7 +2,7 @@ name: CI/CD Frontend
 
 on:
   push:
-    branches: [dev]
+    branches: [main]
 
 env:
   REGISTRY: ghcr.io
@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/frontend:dev
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/frontend:prod
